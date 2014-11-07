@@ -30,6 +30,8 @@ print Sorted.head(1)
 print df['Births'].max()
 #if df['Births'].max() ==df['Births']:
 
+
+print "\nLets Present Data!"
 # Create graph
 df['Births'].plot()
 
@@ -47,7 +49,8 @@ plt.annotate(Text, xy=(1, MaxValue), xytext=(8, 0),
                  xycoords=('axes fraction', 'data'), textcoords='offset points')
 
 print "The most popular name"
-df[df['Births'] == df['Births'].max()]
+print df[df['Births'] == df['Births'].max()]
 #Sorted.head(1) can also be used
 
+plt.show()
 
