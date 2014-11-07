@@ -135,13 +135,13 @@ print Year
 
 print "\nPRESENT DATA\n"
 # First Graph
-ALL['Max'].plot(figsize=(10, 5), label='ALL Markets');#plt.title('ALL Markets')
+ALL['Max'].plot(figsize=(10, 5)),plt.title('ALL Markets');
 
 # Last four Graphs
 fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(20, 10))
 fig.subplots_adjust(hspace=1.0) ## Create space between plots
 
-Daily.loc['FL']['CustomerCount']['2012':].fillna(method='pad').plot(ax=axes[0,0],label='FL')
+Daily.loc['FL']['CustomerCount']['2012':].fillna(method='pad').plot(ax=axes[0,0])
 Daily.loc['GA']['CustomerCount']['2012':].fillna(method='pad').plot(ax=axes[0,1]) 
 Daily.loc['TX']['CustomerCount']['2012':].fillna(method='pad').plot(ax=axes[1,0]) 
 Daily.loc['NY']['CustomerCount']['2012':].fillna(method='pad').plot(ax=axes[1,1]) 
