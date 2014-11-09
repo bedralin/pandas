@@ -28,4 +28,21 @@ print "Combine DataFrames using df=pd.concat([df1,df2])"
 df=pd.concat([df1,df2])
 print df
 
+print "\nWAYS TO CALCULATE OUTLIERS\n"
+
+# Method 1
+
+# make a copy of original df
+newdf = df.copy()
+
+newdf['x-Mean'] = abs(newdf['Revenue'] - newdf['Revenue'].mean())
+newdf['1.96*std'] = 1.96*newdf['Revenue'].std()  
+newdf['Outlier'] = abs(newdf['Revenue'] - newdf['Revenue'].mean()) > 1.96*newdf['Revenue'].std()
+print "Method 1 to make a copy of original df!"
+print newdf
+
+
+ 
+
+
 
